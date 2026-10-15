@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-ar: "IBM Plex Sans Arabic", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-en-serif: "Cormorant Garamond", Georgia, serif;
+    --font-en-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+    
+    --color-olive: #202D23;
+    --color-ivory: #F7F1E7;
+    --color-gold: #C8A96B;
+    --color-gold-light: #DFC89B;
+    --color-espresso: #33251E;
+    --color-blush: #E8C9C5;
+  }
+
+  html[lang="ar"], [dir="rtl"] {
+    font-family: var(--font-ar);
+  }
+
+  html[lang="en"], [dir="ltr"] {
+    font-family: var(--font-en-sans);
+  }
+
+  [dir="ltr"] h1, [dir="ltr"] h2, [dir="ltr"] h3, [dir="ltr"] h4, [dir="ltr"] .font-serif {
+    font-family: var(--font-en-serif);
+  }
+
+  [dir="rtl"] h1, [dir="rtl"] h2, [dir="rtl"] h3, [dir="rtl"] h4 {
+    font-family: var(--font-ar);
+    font-weight: 600;
+  }
+
+  body {
+    background-color: #F7F1E7;
+    color: #202D23;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom Luxury Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #EFE8DC;
+}
+::-webkit-scrollbar-thumb {
+  background: #C8A96B;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #A68648;
+}
+
+/* 3D Perspective and Depth Utilities for Food Carousel */
+.perspective-container {
+  perspective: 1400px;
+  transform-style: preserve-3d;
+}
+
+.carousel-card-3d {
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  transform-style: preserve-3d;
+  will-change: transform, opacity;
+}
+
+/* Gold Gradient Accents */
+.gold-gradient-bg {
+  background: linear-gradient(135deg, #DFC89B 0%, #C8A96B 50%, #A68648 100%);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #DFC89B 0%, #C8A96B 50%, #A68648 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.olive-dark-gradient {
+  background: linear-gradient(180deg, #202D23 0%, #17211A 100%);
+}
+
+.espresso-dark-gradient {
+  background: linear-gradient(180deg, #33251E 0%, #201712 100%);
+}
+
+/* Card hover luxury elevation */
+.card-elevation {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.card-elevation:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px -15px rgba(32, 45, 35, 0.15), 0 8px 16px -6px rgba(51, 37, 30, 0.08);
+}

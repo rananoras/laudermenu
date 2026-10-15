@@ -1,0 +1,6 @@
+{
+  "name": "Atelier Miral • Haute Cuisine & Pâtisserie Riyadh",
+  "description": "A luxury cinematic bilingual restaurant and patisserie e-commerce experience designed for Saudi Arabia, featuring online Mada/card payments, WhatsApp ordering, loyalty rewards, and an interactive 3D-style food carousel.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
