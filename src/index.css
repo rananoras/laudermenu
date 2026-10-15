@@ -6,12 +6,17 @@
     --font-en-serif: "Cormorant Garamond", Georgia, serif;
     --font-en-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
     
-    --color-olive: #202D23;
-    --color-ivory: #F7F1E7;
-    --color-gold: #C8A96B;
-    --color-gold-light: #DFC89B;
-    --color-espresso: #33251E;
-    --color-blush: #E8C9C5;
+    /* Authentic Ladurée Paris Palette */
+    --color-laduree-green: #9BB9A4;
+    --color-laduree-green-dark: #2B4232;
+    --color-laduree-green-soft: #BACDB0;
+    --color-laduree-green-light: #EBF2EC;
+    --color-laduree-pink: #F7E5E4;
+    --color-laduree-pink-dark: #C98886;
+    --color-laduree-ivory: #FAF7F2;
+    --color-laduree-gold: #C6A45C;
+    --color-laduree-gold-light: #DFC89B;
+    --color-laduree-charcoal: #202D23;
   }
 
   html[lang="ar"], [dir="rtl"] {
@@ -32,26 +37,26 @@
   }
 
   body {
-    background-color: #F7F1E7;
+    background-color: #FAF7F2;
     color: #202D23;
     overflow-x: hidden;
   }
 }
 
-/* Custom Luxury Scrollbars */
+/* Custom Luxury Ladurée Scrollbars */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #EFE8DC;
+  background: #EBF2EC;
 }
 ::-webkit-scrollbar-thumb {
-  background: #C8A96B;
+  background: #9BB9A4;
   border-radius: 9999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #A68648;
+  background: #7E9E88;
 }
 
 /* 3D Perspective and Depth Utilities for Food Carousel */
@@ -66,23 +71,27 @@
   will-change: transform, opacity;
 }
 
-/* Gold Gradient Accents */
+/* Ladurée Gold & Green Accents */
 .gold-gradient-bg {
-  background: linear-gradient(135deg, #DFC89B 0%, #C8A96B 50%, #A68648 100%);
+  background: linear-gradient(135deg, #DFC89B 0%, #C6A45C 50%, #A6853A 100%);
 }
 
 .gold-gradient-text {
-  background: linear-gradient(135deg, #DFC89B 0%, #C8A96B 50%, #A68648 100%);
+  background: linear-gradient(135deg, #DFC89B 0%, #C6A45C 50%, #A6853A 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.olive-dark-gradient {
-  background: linear-gradient(180deg, #202D23 0%, #17211A 100%);
+.laduree-green-gradient {
+  background: linear-gradient(180deg, #9BB9A4 0%, #7E9E88 100%);
 }
 
-.espresso-dark-gradient {
-  background: linear-gradient(180deg, #33251E 0%, #201712 100%);
+.laduree-dark-gradient {
+  background: linear-gradient(180deg, #2B4232 0%, #1D2E23 100%);
+}
+
+.laduree-pink-gradient {
+  background: linear-gradient(135deg, #FBF0F0 0%, #F5DFDE 100%);
 }
 
 /* Card hover luxury elevation */
@@ -90,6 +99,17 @@
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .card-elevation:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 40px -15px rgba(32, 45, 35, 0.15), 0 8px 16px -6px rgba(51, 37, 30, 0.08);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px -12px rgba(43, 66, 50, 0.12), 0 6px 12px -4px rgba(43, 66, 50, 0.06);
+}
+
+/* Ladurée Ribbon & Frame styling */
+.laduree-frame {
+  border: 1px solid #C6A45C;
+  outline: 1px solid #C6A45C;
+  outline-offset: -4px;
+}
+
+.laduree-cameo-shadow {
+  box-shadow: 0 10px 25px -5px rgba(155, 185, 164, 0.3), 0 8px 10px -6px rgba(43, 66, 50, 0.1);
 }

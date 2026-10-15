@@ -1,14 +1,63 @@
 export type Language = 'ar' | 'en';
 
+export type PageId = 
+  | 'home' 
+  | 'macarons' 
+  | 'patisseries' 
+  | 'delicacies' 
+  | 'gifting' 
+  | 'salons' 
+  | 'heritage' 
+  | 'loyalty';
+
 export type ProductCategory = 
   | 'all' 
-  | 'starters' 
-  | 'mains' 
-  | 'signatures' 
+  | 'macarons' 
+  | 'patisseries' 
   | 'cakes' 
-  | 'desserts' 
-  | 'beverages' 
+  | 'chocolates' 
+  | 'teas' 
+  | 'pyramids' 
+  | 'gifting'
+  | 'signatures'
+  | 'desserts'
+  | 'beverages'
+  | 'starters'
+  | 'mains'
   | 'gifts';
+
+export interface MacaronFlavor {
+  id: string;
+  nameEn: string;
+  nameAr: string;
+  frenchName: string;
+  colorHex: string;
+  badgeBg: string;
+  descriptionEn: string;
+  descriptionAr: string;
+  image: string;
+  isSeasonal?: boolean;
+}
+
+export interface LadureeSalon {
+  id: string;
+  nameEn: string;
+  nameAr: string;
+  cityEn: string;
+  cityAr: string;
+  mallEn: string;
+  mallAr: string;
+  hoursEn: string;
+  hoursAr: string;
+  phone: string;
+  addressEn: string;
+  addressAr: string;
+  hasAfternoonTea: boolean;
+  hasTerrace: boolean;
+  isCoffeeShopConcept?: boolean;
+  image: string;
+  coordinates?: { lat: number; lng: number };
+}
 
 export interface ProductVariant {
   id: string;
@@ -61,6 +110,9 @@ export interface CartItem {
   customCakeMessage?: string;
   selectedCandles?: boolean;
   specialInstructions?: string;
+  customMacaronFlavors?: { flavorName: string; quantity: number }[];
+  ribbonColor?: string;
+  boxStyle?: string;
 }
 
 export interface SaudiAddress {
