@@ -2,6 +2,29 @@
 <html lang="ar" dir="rtl">
   <head>
     <meta charset="UTF-8" />
+    <script>
+      (function() {
+        try {
+          var _origFetch = typeof window !== 'undefined' && window.fetch ? window.fetch.bind(window) : undefined;
+          var _currentFetch = _origFetch;
+          Object.defineProperty(window, 'fetch', {
+            configurable: true,
+            enumerable: true,
+            get: function() {
+              return _currentFetch;
+            },
+            set: function(fn) {
+              _currentFetch = fn;
+            }
+          });
+        } catch (e) {
+          // Fallback if defineProperty fails
+          try {
+            window.fetch = window.fetch;
+          } catch (_) {}
+        }
+      })();
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>أتيلييه ميرال • Atelier Miral Haute Cuisine & Pâtisserie Riyadh</title>
     <meta name="description" content="مطعم وباتيسري فاخر في الرياض يقدم أرقى فنون الطهي والحلويات الفرنسية الفاخرة بلمسات نجدية أصيلة. تجربة طعام استثنائية وتوصيل مبرد لجميع أحياء الرياض." />

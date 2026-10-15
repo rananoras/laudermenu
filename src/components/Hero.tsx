@@ -1,5 +1,6 @@
 import React from 'react';
 import { useRestaurant } from '../context/RestaurantContext';
+import { WavyBackground3D } from './WavyBackground3D';
 import { 
   Sparkles, 
   ArrowRight, 
@@ -40,7 +41,12 @@ export const Hero: React.FC = () => {
   const ArrowIcon = isRtl ? ArrowLeft : ArrowRight;
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-[#1A251D] via-[#202D23] to-[#17211A] text-[#F7F1E7] border-b border-[#33251E]">
+    <section className="relative overflow-hidden bg-gradient-to-b from-[#1A251D] via-[#202D23] to-[#17211A] text-[#F7F1E7] border-b border-[#33251E] min-h-[550px] flex items-center">
+      {/* 3D Wavy Luxury Canvas Backdrop */}
+      <div className="absolute inset-0 w-full h-full z-0 overflow-hidden opacity-90">
+        <WavyBackground3D interactive={true} showControls={true} />
+      </div>
+
       {/* Subtle radial background lighting */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full pointer-events-none opacity-20 bg-[radial-gradient(#C8A96B_1px,transparent_1px)] [background-size:28px_28px]" />
 
